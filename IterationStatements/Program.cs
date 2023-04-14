@@ -12,32 +12,37 @@ namespace IterationStatements
 
                 //Create a List called "numbers" - DONE!
                 var numbers = new List<int>();
-            
+
             //-----START HERE------------------------------------------
             //Create a variable of type int and name it num
             //initialize the variable with a value of 0
 
+            int num = 0;
 
 
             // Create a do-while loop and use the template below:
-
+            var i = 0;
+            do
             {
                 // Increment num by 1
+                i++;
 
                 // Then add num to the collection - numbers
-                    // Hint: reference num inside of the Add method's parentheses
-                numbers.Add(/* num */);
+                // Hint: reference num inside of the Add method's parentheses
+                numbers.Add( num );
 
-            } // <---- While your variable is less than 100
+            } while (i < 100);        // <---- While your variable is less than 100
 
 
 
-            // Create a while loop
-            // <--- While num is less than 200
+            // Create a while loop      // ** CHECK TO SEE IF CORRECT **
+
+            while ( num < 200)//<--- While num is less than 200
             {
-                // Increment num by 1
-                // Then add num to the collection numbers
-                    //HINT: copy how this was done in the do while loop
+                i++;                // Increment num by 1
+
+                    numbers.Add(num);   // Then add num to the collection numbers
+                                    //HINT: copy how this was done in the do while loop
 
             }
 
@@ -46,9 +51,12 @@ namespace IterationStatements
             Console.WriteLine("Increase:");
 
 
-            // Create a foreach loop using the collection - numbers
+            // Create a foreach loop using the collection - numbers      ** CHECK TO SEE IF CORRECT **
                 //In the scope of the foreach loop, print each number in numbers
-             
+             foreach (int digit in numbers)
+            {
+                Console.WriteLine(digit);
+                    }
 
 
             Console.WriteLine("");
@@ -59,11 +67,13 @@ namespace IterationStatements
                 // in your initializer set the value of i to 199
                 // in your conditional, as long as i is less than or equal to the amount of items in "numbers" - use (numbers.Count)
                 // AND as long as i is greater than or equal to 0
-                // Decrement i by 1
+                // Decrement i by 1 */
 
             //start for loop here
+             
+            for ( i = 199; i <= numbers.Count && i <= 0; i--)
             {
-                // place numbers[i] inside of the Console.WriteLine() method
+                Console.WriteLine(numbers[i]);    // place numbers[i] inside of the Console.WriteLine() method
             }
 
             //------------End of exercise
